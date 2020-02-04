@@ -11,11 +11,14 @@ import { ActivatedRoute } from '@angular/router';
   providers: [TodoService]
 
 })
+
 export class TodoComponent implements OnInit {
   public todos;
   public activeTasks;
   public path;
   public newTodo;
+  
+
 
   addTodo() {
   this.todoService.add({ title: this.newTodo, isDone: false }).then(() => {
